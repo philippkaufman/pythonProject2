@@ -1,0 +1,1 @@
+# podumat gde hranit accumulator
