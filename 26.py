@@ -1,10 +1,13 @@
 from math import sqrt, ceil
 
-def check(n):
-    for i in reversed(range(ceil(sqrt(n))), 2):
-        if n % i == 0:
-            if i % 10 == 7:
-                return i
+
+def get_denominator(number):
+    denominator = 17
+    while denominator < ceil(sqrt(number)):
+        if n % denominator == 0:
+            if denominator % 10 == 7:
+                return denominator
+        denominator += 10
     return 0
 
 
@@ -13,7 +16,7 @@ if __name__ == '__main__':
     n = 600000
     while i > 0:
         n += 1
-        delitel = check(n)
-        if delitel:
-            print(n, delitel)
+        lowest_denominator = get_denominator(n)
+        if lowest_denominator:
+            print(n, lowest_denominator)
             i -= 1
