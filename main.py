@@ -1,8 +1,7 @@
 from math import sqrt, ceil
 
 def check(n):
-    for i in reversed(range(ceil(sqrt(n))), n):
-        if n/i == 7
+    for i in reversed(range(ceil(sqrt(n))), 2):
         if n % i == 0:
             if i % 10 == 7:
                 return i
