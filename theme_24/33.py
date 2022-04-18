@@ -1,25 +1,24 @@
 def f():
     with open('C:/Users/Виктория/Desktop/24_33.txt') as f:
         txt = f.readline()
-        a = 0
-        counta = 0
-        max = 0
-        for i in range(len(txt)):
-            if txt[i] != 'E':
-                a+=1
-            if a>max:
-                max = a
-            if txt[i] == 'E':
-                break
-            if txt[i] == 'A':
-                counta +=1
-            if counta < 3
-    print(max)
-
-
-
-
-
+        len = 0
+        count_A = 0
+        max_len = 0
+        for i in txt:
+            if i == 'E':
+                if count_A < 3:
+                    len = 0
+                    count_A = 0
+                else:
+                    max_len = max(len, max_len)
+                    len = 0
+                    count_A = 0
+            elif i == 'A':
+                count_A += 1
+                len += 1
+            else:
+                len += 1
+    print(max_len)
 
 
 if __name__ == '__main__':
